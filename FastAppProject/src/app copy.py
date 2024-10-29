@@ -1,6 +1,5 @@
 #in vscode create file app.py
-#pip
-#pip install SQLAlchemy
+#pip install sqlalchemy, #pip install SQLAlchemy, #pip install jinja2
 
 from fastapi import FastAPI, Response, Depends
 from schemas import ToDoSchemaIn, ToDoSchemaOut
@@ -88,10 +87,6 @@ def delete_todo(todo_id:int, db:Session = Depends(get_db)):
     db.delet(single_todo)
     db.commit()
     return single_todo   # return json
-
-
-
-
 
 
 # uvicorn app:app --reload        # run in Trminal 
